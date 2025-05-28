@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.example</groupId>
+  <artifactId>F1-SDLB</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>Archetype - F1-SDLB</name>
+  <url>http://maven.apache.org</url>
+
+  <parent>
+    <groupId>io.smartdatalake</groupId>
+    <artifactId>sdl-parent</artifactId>
+    <!--
+        Set the smartdatalake version to use here.
+        If version cannot be resolved, make sure maven central repository is defined in settings.xml and the corresponding profile activated.
+        If version in IntelliJ still cannot be resolved, a restart of IntelliJ might help!
+    -->
+    <version>2.8.1-SNAPSHOT</version>
+  </parent>
+
+  <properties>
+    <!-- default scala version - use predefined maven profiles to override -->
+    <scala.minor.version>2.12</scala.minor.version>
+    <scala.version>${scala.minor.version}.18</scala.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.smartdatalake</groupId>
+      <artifactId>sdl-core_${scala.minor.version}</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.smartdatalake</groupId>
+      <artifactId>sdl-deltalake_${scala.minor.version}</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+  </dependencies>
+
+</project>
+
